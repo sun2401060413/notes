@@ -1,0 +1,16 @@
+# 构建产物
+site/
+
+# Python
+__pycache__/
+*.pyc
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.rej
+*.orig

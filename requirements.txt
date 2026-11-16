@@ -1,0 +1,7 @@
+# MkDocs 站点构建依赖（master 分支 = 笔记源码）
+# 安装：pip install -r requirements.txt
+# 本地预览：mkdocs serve
+# 发布：mkdocs gh-deploy
+mkdocs==1.6.1
+mkdocs-material==9.8.1
+pymdown-extensions==13.1
