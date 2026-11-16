@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#classification" class="md-skip">
+        <a href="#classification-接口" class="md-skip">
           Skip to content
         </a>
       
@@ -524,7 +524,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#datalistgenerate" class="md-nav__link">
+  <a href="#datalistgenerate-接口" class="md-nav__link">
     <span class="md-ellipsis">
       
         DatalistGenerate 接口
@@ -535,7 +535,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#input接口" class="md-nav__link">
     <span class="md-ellipsis">
       
         input接口
@@ -546,7 +546,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#loss" class="md-nav__link">
+  <a href="#loss接口" class="md-nav__link">
     <span class="md-ellipsis">
       
         loss接口
@@ -557,7 +557,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#test_performance" class="md-nav__link">
+  <a href="#test_performance接口" class="md-nav__link">
     <span class="md-ellipsis">
       
         test_performance接口
@@ -568,7 +568,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#optimizers_settings" class="md-nav__link">
+  <a href="#optimizers_settings接口" class="md-nav__link">
     <span class="md-ellipsis">
       
         optimizers_settings接口
@@ -1043,7 +1043,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#datalistgenerate" class="md-nav__link">
+  <a href="#datalistgenerate-接口" class="md-nav__link">
     <span class="md-ellipsis">
       
         DatalistGenerate 接口
@@ -1054,7 +1054,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#input接口" class="md-nav__link">
     <span class="md-ellipsis">
       
         input接口
@@ -1065,7 +1065,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#loss" class="md-nav__link">
+  <a href="#loss接口" class="md-nav__link">
     <span class="md-ellipsis">
       
         loss接口
@@ -1076,7 +1076,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#test_performance" class="md-nav__link">
+  <a href="#test_performance接口" class="md-nav__link">
     <span class="md-ellipsis">
       
         test_performance接口
@@ -1087,7 +1087,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#optimizers_settings" class="md-nav__link">
+  <a href="#optimizers_settings接口" class="md-nav__link">
     <span class="md-ellipsis">
       
         optimizers_settings接口
@@ -1114,7 +1114,7 @@
 
 
 
-<h1 id="classification">Classification 接口<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h1>
+<h1 id="classification-接口">Classification 接口<a class="headerlink" href="#classification-接口" title="Permanent link">&para;</a></h1>
 <details class="info">
 <summary>版本信息</summary>
 <p>Created by 孙姣姣 2019-07-31 20:14 Version 1.0.1    </p>
@@ -1126,7 +1126,7 @@
 </details>
 <p><a href="/2019_summer/deepLearning/alexnet.zip">Alexnet 代码下载</a></p>
 <hr />
-<h3 id="datalistgenerate">DatalistGenerate 接口<a class="headerlink" href="#datalistgenerate" title="Permanent link">&para;</a></h3>
+<h3 id="datalistgenerate-接口">DatalistGenerate 接口<a class="headerlink" href="#datalistgenerate-接口" title="Permanent link">&para;</a></h3>
 <p>从分好类的图片集(一类一个文件夹)，生成文件路径与对应标签列表。  </p>
 <ol>
 <li>
@@ -1151,7 +1151,7 @@
 </li>
 </ol>
 <hr />
-<h3 id="input">input接口<a class="headerlink" href="#input" title="Permanent link">&para;</a></h3>
+<h3 id="input接口">input接口<a class="headerlink" href="#input接口" title="Permanent link">&para;</a></h3>
 <ol>
 <li>定义一个类INPUT_DATA，类中定义了9个函数。
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">INPUT_DATA</span><span class="p">():</span>
@@ -1209,7 +1209,7 @@
 <p><code>cv2.imread</code>亦可实现图像读取功能, 但文件路径不能包含中文字符.此处采用自定义的<code>cv_imread</code>函数,目的是支持对包含中文路径文件的读入.</p>
 </div>
 <hr />
-<h3 id="loss">loss接口<a class="headerlink" href="#loss" title="Permanent link">&para;</a></h3>
+<h3 id="loss接口">loss接口<a class="headerlink" href="#loss接口" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>定义一个类：<code>LossHistory</code>，<code>Callback</code>:回调函数，保存每个<code>batch</code>的<code>loss</code>、<code>acc</code>、<code>val_loss</code>、<code>val_acc</code>的回调函数,保存每个<code>epoch</code>的<code>loss</code>、<code>acc</code>、<code>val_loss</code>、<code>val_acc</code>的回调函数。</p>
@@ -1238,7 +1238,7 @@
 </li>
 </ol>
 <hr />
-<h3 id="test_performance">test_performance接口<a class="headerlink" href="#test_performance" title="Permanent link">&para;</a></h3>
+<h3 id="test_performance接口">test_performance接口<a class="headerlink" href="#test_performance接口" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>生成一个<code>.txt</code>文件，用来记录<code>precision_score</code>:准确率，<code>recall_score</code>：召回率，<code>f1_score</code>：统计学中用来衡量二分类模型精确度的一种指标，<code>classification_report</code>：分类报告，<code>confusion_matrix</code>:混淆矩阵。
@@ -1258,7 +1258,7 @@
 </li>
 </ol>
 <hr />
-<h3 id="optimizers_settings">optimizers_settings接口<a class="headerlink" href="#optimizers_settings" title="Permanent link">&para;</a></h3>
+<h3 id="optimizers_settings接口">optimizers_settings接口<a class="headerlink" href="#optimizers_settings接口" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>定义一个函数：<code>get_optimizer</code>，对优化器算法进行设定。
