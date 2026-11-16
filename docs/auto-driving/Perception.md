@@ -1,6 +1,12 @@
 # 自动驾驶感知
 
 ??? info "版本信息"
+	Version 1.0.1 Revised on 2026-11-16
+
+	* 补齐参考文献链接：论文（arXiv）、数据集、工具链
+	* 启用中文友好的标题锚点，章节之间可直接跳转
+	* 修复全站加粗失效问题（`pymdownx.betterem` 的 `smart_enable` 由 all 改为 underscore）
+
 	Version 1.0.0 Created on 2026-11-16
 
 	* 首次添加：感知系统分层、传感器与标定、2D/3D 感知、BEV、多传感器融合、端到端、评测与部署
@@ -40,7 +46,7 @@
 | GNSS/RTK + IMU | 绝对位姿、高频 | 隧道/城市峡谷失效 | 100 Hz IMU | 定位、运动补偿 |
 | 轮速/方向盘 | 可靠、便宜 | 打滑误差 | 50 Hz | 航位推算 |
 
-车路协同场景下，路侧还会布设**固定视角相机 + 雷视一体机**，其特点是标定后位姿不变、视角俯视、覆盖范围大，但会引入通信时延与跨设备坐标系对齐问题（详见第 10 节）。
+车路协同场景下，路侧还会布设**固定视角相机 + 雷视一体机**，其特点是标定后位姿不变、视角俯视、覆盖范围大，但会引入通信时延与跨设备坐标系对齐问题（详见第 10 节[车路协同感知要点](#10-车路协同感知要点)）。
 
 ## 3. 坐标系与标定
 
@@ -339,20 +345,28 @@ PyTorch ──▶ ONNX ──▶ TensorRT(FP16/INT8) ──▶ 车端推理
 
 | 数据集 | 传感器 | 规模/特点 |
 | --- | --- | --- |
-| nuScenes | 6 相机 + 32 线 LiDAR + 5 雷达 | 1000 场景，BEV/3D 检测事实标准 |
-| Waymo Open | 5 相机 + 3 LiDAR | 精度高、标注质量好，评测严 |
-| KITTI | 2 相机 + 64 线 LiDAR | 老基准，仍用于算法对比 |
-| Argoverse 2 | 7 相机 + 2 LiDAR | 侧重预测与地图 |
-| ONCE | 1 LiDAR + 7 相机 | 国内道路，量大 |
-| DAIR-V2X | 车端 + 路侧 | 车路协同研究首选 |
-| Cityscapes / BDD100K | 单目 | 2D 分割与检测预训练 |
+| [nuScenes](https://www.nuscenes.org/) | 6 相机 + 32 线 LiDAR + 5 雷达 | 1000 场景，BEV/3D 检测事实标准 |
+| [Waymo Open](https://waymo.com/open/) | 5 相机 + 3 LiDAR | 精度高、标注质量好，评测严 |
+| [KITTI](https://www.cvlibs.net/datasets/kitti/) | 2 相机 + 64 线 LiDAR | 老基准，仍用于算法对比 |
+| [Argoverse 2](https://www.argoverse.org/) | 7 相机 + 2 LiDAR | 侧重预测与地图 |
+| [ONCE](https://once-for-auto-driving.github.io/) | 1 LiDAR + 7 相机 | 国内道路，量大 |
+| [DAIR-V2X](https://github.com/AIR-THU/DAIR-V2X) | 车端 + 路侧 | 车路协同研究首选 |
+| [Cityscapes](https://www.cityscapes-dataset.com/) / [BDD100K](https://bdd-data.berkeley.edu/) | 单目 | 2D 分割与检测预训练 |
 
 ## 12. 工具链与参考
 
-- **框架**：MMDetection3D、OpenPCDet、BEVFormer/BEVDet（官方实现）、Detectron2
-- **部署**：TensorRT、ONNX Runtime、CUDA Graph、NVIDIA DeepStream
-- **中间件**：ROS 2 / Autoware、CyberRT
-- **论文**：PointPillars (2019)、LSS (2020)、BEVFormer (2022)、CenterPoint (2021)、BEVFusion (2022)、UniAD (2023)、MapTR (2023)、OccFormer (2023)
+- **框架**：[MMDetection3D](https://github.com/open-mmlab/mmdetection3d)、[OpenPCDet](https://github.com/open-mmlab/OpenPCDet)、[BEVFormer](https://github.com/fundamentalvision/BEVFormer) / [BEVDet](https://github.com/HuangJunJie2017/BEVDet)（官方实现）、[Detectron2](https://github.com/facebookresearch/detectron2)
+- **部署**：[TensorRT](https://developer.nvidia.com/tensorrt)、[ONNX Runtime](https://onnxruntime.ai/)、CUDA Graph、[NVIDIA DeepStream](https://developer.nvidia.com/deepstream-sdk)
+- **中间件**：[ROS 2](https://docs.ros.org/)、[Autoware](https://github.com/autowarefoundation/autoware)、[CyberRT](https://github.com/ApolloAuto/apollo)
+- **论文**（可直接点开 arXiv 摘要页）：
+    - [PointPillars (2019)](https://arxiv.org/abs/1812.05784) — pillar 编码，实时点云检测的工程 baseline
+    - [LSS (2020)](https://arxiv.org/abs/2008.05711) — Lift-Splat-Shoot，BEV 范式的起点
+    - [CenterPoint (2021)](https://arxiv.org/abs/2006.11275) — 中心点 3D 检测 + 跟踪一体
+    - [BEVFormer (2022)](https://arxiv.org/abs/2203.17270) — 时空可变形注意力的 BEV
+    - [BEVFusion (2022)](https://arxiv.org/abs/2205.13542) — BEV 空间内的相机-LiDAR 融合
+    - [MapTR (2023)](https://arxiv.org/abs/2208.14437) — 矢量化地图的置换等价建模
+    - [OccFormer (2023)](https://arxiv.org/abs/2304.05316) — 双路径 Transformer 做语义占用
+    - [UniAD (2023)](https://arxiv.org/abs/2212.10156) — 感知-预测-规划统一网络
 
 !!! quote "一句话总结"
     感知的上限由数据与标定决定，下限由工程与算力决定；模型结构只是中间那一层，别把它当成全部。
