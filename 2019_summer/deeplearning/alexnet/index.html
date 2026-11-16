@@ -10,23 +10,28 @@
       
       
       
+        <link rel="canonical" href="https://sun2401060413.github.io/notes/2019_summer/deeplearning/alexnet/">
       
-        <link rel="prev" href="../../Unity/FreewayEquipment/">
+      
+        <link rel="prev" href="../classification/">
       
       
-        <link rel="next" href="../classification/">
+        <link rel="next" href="../densenet/">
+      
+      
+        
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
-        <title>Alexnet - 培训资料</title>
+        <title>训练参数配置记录 - 培训资料</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.10ba22f1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
       
 
@@ -45,11 +50,10 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   </head>
@@ -83,12 +87,12 @@
     <a href="../../.." title="培训资料" class="md-header__button md-logo" aria-label="培训资料" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Alexnet
+              训练参数配置记录
             
           </span>
         </div>
@@ -108,36 +112,38 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -148,6 +154,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -178,7 +185,7 @@
     <a href="../../.." title="培训资料" class="md-nav__button md-logo" aria-label="培训资料" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     培训资料
@@ -196,9 +203,16 @@
       <a href="../../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     主页
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -218,6 +232,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
@@ -228,9 +243,16 @@
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    2019 summer
+    
+  
+    培训
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -239,7 +261,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            2019 summer
+            
+  
+    培训
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -249,6 +275,7 @@
   
   
   
+    
     
     
     
@@ -263,9 +290,16 @@
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Unity
+    
+  
+    OpenCV
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -274,7 +308,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            Unity
+            
+  
+    OpenCV
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -285,12 +323,75 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Unity/FreewayEquipment/" class="md-nav__link">
+      <a href="../../opencv/opencv/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    FreewayEquipment
+    
+  
+    OpenCV 培训
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opencv/cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenCV CheatSheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opencv/video2image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    opencv 常用程序（一）
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -319,6 +420,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
@@ -329,9 +431,16 @@
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Deeplearning
+    
+  
+    Deep Learning
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -340,9 +449,41 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            Deeplearning
+            
+  
+    Deep Learning
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classification 接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -361,9 +502,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
-    Alexnet
+    
+  
+    训练参数配置记录
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -372,9 +520,16 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
-    Alexnet
+    
+  
+    训练参数配置记录
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -395,7 +550,9 @@
         <li class="md-nav__item">
   <a href="#alexnet" class="md-nav__link">
     <span class="md-ellipsis">
-      AlexNet网络
+      
+        AlexNet网络
+      
     </span>
   </a>
   
@@ -417,33 +574,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../classification/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Classification 接口
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../densenet/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Densenet
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -462,9 +605,16 @@
       <a href="../references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     资料
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -487,6 +637,7 @@
   
   
   
+    
     
     
     
@@ -501,9 +652,16 @@
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Opencv
+    
+  
+    Unity
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -512,7 +670,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
-            Opencv
+            
+  
+    Unity
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -523,54 +685,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../../opencv/cheatsheet/" class="md-nav__link">
+      <a href="../../Unity/FreewayEquipment/" class="md-nav__link">
         
   
-  <span class="md-ellipsis">
-    OpenCV CheatSheet
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../opencv/opencv/" class="md-nav__link">
-        
   
   <span class="md-ellipsis">
-    OpenCV 培训
-  </span>
+    
+  
+    FreewayEquipment
   
 
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../opencv/video2image/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    opencv 常用程序（一）
+    
   </span>
+  
   
 
       </a>
@@ -600,6 +727,7 @@
   
   
   
+    
     
     
     
@@ -614,9 +742,16 @@
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Auto driving
+    
+  
+    自动驾驶
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -625,7 +760,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Auto driving
+            
+  
+    自动驾驶
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -639,9 +778,44 @@
       <a href="../../../auto-driving/Readme/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     车路协同自动驾驶资料搜集
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../auto-driving/Perception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动驾驶感知
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -663,6 +837,7 @@
   
   
   
+    
     
     
     
@@ -677,9 +852,16 @@
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Home
+    
+  
+    项目
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -688,70 +870,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Home
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../home/mainpage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    装备所算法组主页
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
-  <span class="md-ellipsis">
-    Resume
-  </span>
+    项目
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Resume
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -765,9 +888,16 @@
       <a href="../../../resume/EnvirDetection/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     高速公路环境状态辨识
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -786,9 +916,16 @@
       <a href="../../../resume/HZMB/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     三维数字孪生应急演练系统
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -800,6 +937,33 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/mainpage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自用主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -831,7 +995,9 @@
         <li class="md-nav__item">
   <a href="#alexnet" class="md-nav__link">
     <span class="md-ellipsis">
-      AlexNet网络
+      
+        AlexNet网络
+      
     </span>
   </a>
   
@@ -847,12 +1013,14 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
-  <h1>Alexnet</h1>
+
+  <h1>训练参数配置记录</h1>
 
 <details class="info">
 <summary>版本信息</summary>
@@ -867,11 +1035,11 @@
 <ol>
 <li>
 <p>在<code>AlexNet</code>网络程序运行之前要接入<code>loss</code>、<code>test_performance</code>、<code>flags</code>、<code>input</code>、<code>optimizers_settings</code>这五个模块。
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">loss</span>
-<span class="kn">import</span> <span class="nn">test_performance</span> <span class="k">as</span> <span class="nn">tp</span>
-<span class="kn">import</span> <span class="nn">flags</span>
-<span class="kn">import</span> <span class="nn">input</span>
-<span class="kn">import</span> <span class="nn">optimizers_setting</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">loss</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">test_performance</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">flags</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">input</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">optimizers_setting</span>
 </code></pre></div></p>
 </li>
 <li>
@@ -880,57 +1048,57 @@
 <li>
 <p>生成<code>.txt</code>日志文件，用来记录训练参数：<code>mode</code>、<code>filepath</code>、<code>savepath</code>、<code>weightpath</code>、<code>batch_size</code>、<code>extension</code>、<code>training_ratio</code>、<code>validation_ratio</code>、<code>size、channels</code>、<code>input_mode</code>、<code>epoches</code>、<code>classname</code>、<code>training samples</code>、<code>validate samples</code>、<code>test samples</code>、<code>Totally time cost</code>、<code>Test score</code>和<code>Test accuracy</code>。
 <div class="highlight"><pre><span></span><code><span class="c1"># 训练参数配置记录</span>
-<span class="n">recorder_name</span> <span class="o">=</span> <span class="n">info_dict</span><span class="p">[</span><span class="s2">&quot;savepath&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/training_log_&quot;</span> <span class="o">+</span> <span class="n">part_string</span> <span class="o">+</span> <span class="s2">&quot;.txt&quot;</span>
+<span class="n">recorder_name</span> <span class="o">=</span> <span class="n">info_dict</span><span class="p">[</span><span class="s2">"savepath"</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"/training_log_"</span> <span class="o">+</span> <span class="n">part_string</span> <span class="o">+</span> <span class="s2">".txt"</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>生成一个表格，用来记录loss和acc值。
  <div class="highlight"><pre><span></span><code><span class="c1"># 训练过程数据记录</span>
-<span class="n">csv_savename</span> <span class="o">=</span> <span class="n">info_dict</span><span class="p">[</span><span class="s2">&quot;savepath&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="s2">&quot;AlexNet_&quot;</span> <span class="o">+</span> <span class="n">part_string</span> <span class="o">+</span> <span class="s2">&quot;_loss.csv&quot;</span>
+<span class="n">csv_savename</span> <span class="o">=</span> <span class="n">info_dict</span><span class="p">[</span><span class="s2">"savepath"</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="s2">"AlexNet_"</span> <span class="o">+</span> <span class="n">part_string</span> <span class="o">+</span> <span class="s2">"_loss.csv"</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>生成一张图片，用来训练集和验证集的loss和acc值。
  <div class="highlight"><pre><span></span><code><span class="c1"># 训练过程数据绘制图形</span>
-<span class="n">fig_savename</span> <span class="o">=</span> <span class="n">info_dict</span><span class="p">[</span><span class="s2">&quot;savepath&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="s2">&quot;AlexNet_&quot;</span> <span class="o">+</span> <span class="n">part_string</span> <span class="o">+</span> <span class="s2">&quot;.png&quot;</span>
+<span class="n">fig_savename</span> <span class="o">=</span> <span class="n">info_dict</span><span class="p">[</span><span class="s2">"savepath"</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="s2">"AlexNet_"</span> <span class="o">+</span> <span class="n">part_string</span> <span class="o">+</span> <span class="s2">".png"</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>生成一个.h5文件，用来保存训练模型。
  <div class="highlight"><pre><span></span><code><span class="c1"># 训练保存模型</span>
-<span class="n">model_savename</span> <span class="o">=</span> <span class="n">info_dict</span><span class="p">[</span><span class="s2">&quot;savepath&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="s2">&quot;AlexNet_&quot;</span> <span class="o">+</span> <span class="n">part_string</span> <span class="o">+</span> <span class="s2">&quot;_model.h5&quot;</span>
+<span class="n">model_savename</span> <span class="o">=</span> <span class="n">info_dict</span><span class="p">[</span><span class="s2">"savepath"</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="s2">"AlexNet_"</span> <span class="o">+</span> <span class="n">part_string</span> <span class="o">+</span> <span class="s2">"_model.h5"</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>当前模式为训练模式。
  <div class="highlight"><pre><span></span><code><span class="c1"># 运行模式配置</span>
-<span class="n">input_dict</span><span class="p">[</span><span class="s2">&quot;mode&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;train&quot;</span>
+<span class="n">input_dict</span><span class="p">[</span><span class="s2">"mode"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"train"</span>
 </code></pre></div></p>
 </li>
 <li>
 <p><code>‘r’</code>用来切换正斜杠和反斜杠，<code>‘I:\lvtong1\resized’</code>是你自己数据集（图片大小为<code>224*224</code>）。<code>‘I:\lvtong1\results’</code>用来保存你训练的结果，在此程序中会生成<code>.png</code>、<code>.csv</code>、<code>.h5</code>、<code>.txt</code>文件。
 <div class="highlight"><pre><span></span><code><span class="c1"># 数据集读取地址配置</span>
-<span class="n">input_dict</span><span class="p">[</span><span class="s2">&quot;filepath&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;I:\lvtong1\resized&#39;</span>
+<span class="n">input_dict</span><span class="p">[</span><span class="s2">"filepath"</span><span class="p">]</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">'I:\lvtong1\resized'</span>
 <span class="c1"># 模型保存地址配置</span>
-<span class="n">input_dict</span><span class="p">[</span><span class="s2">&quot;savepath&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;I:\lvtong1\results&#39;</span>
+<span class="n">input_dict</span><span class="p">[</span><span class="s2">"savepath"</span><span class="p">]</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">'I:\lvtong1\results'</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>迁移权重的读取地址。
 <div class="highlight"><pre><span></span><code><span class="c1"># 迁移权重读取根目录</span>
-<span class="n">input_dict</span><span class="p">[</span><span class="s2">&quot;weightpath&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;F:/sz/keras_weights&#39;</span>
+<span class="n">input_dict</span><span class="p">[</span><span class="s2">"weightpath"</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'F:/sz/keras_weights'</span>
 </code></pre></div></p>
 </li>
 <li>
 <p><code>‘batch_size’</code>：单次训练用的样本数；<code>‘extention’</code>:扩展名；<code>‘training_ratio’</code>：训练集占样本总量的比率；<code>‘validation_ratio’</code>:验证集占样本总量的比率；训练集、验证集和测试集的比率一般为：8：1：1。
 <code>‘size’</code>:图片大小；<code>‘channels’</code>: 通道数；<code>‘input_mode’</code>:   输入模式；<code>‘epoches’</code>:训练轮；<code>‘classname’</code>:分类的类名。
- <div class="highlight"><pre><span></span><code><span class="n">input_dict</span><span class="p">[</span><span class="s2">&quot;batch_size] = 16</span>
-<span class="n">input_dict</span><span class="p">[</span><span class="s2">&quot;extension&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.jpg&quot;</span><span class="p">,</span><span class="s2">&quot;.png&quot;</span><span class="p">]</span>
-<span class="n">ipnut_dict</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">224</span>
-<span class="n">input_dict</span><span class="p">[</span><span class="s2">&quot;channels&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">input_dict</span><span class="p">[</span><span class="s2">&quot;input_mode&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;resized&quot;</span>
-<span class="n">input_dict</span><span class="p">[</span><span class="s2">&quot;epoches&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">input_dict</span><span class="p">[</span><span class="s2">&quot;classname&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name_1&quot;</span><span class="p">,</span><span class="s2">&quot;name_2&quot;</span><span class="p">,</span><span class="s2">&quot;name_3&quot;</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="s2">&quot;name_N&quot;</span><span class="p">]</span> <span class="c1"># 根据实际数据集配置,注:不要使用中文</span>
+ <div class="highlight"><pre><span></span><code><span class="n">input_dict</span><span class="p">[</span><span class="s2">"batch_size] = 16</span>
+<span class="n">input_dict</span><span class="p">[</span><span class="s2">"extension"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">".jpg"</span><span class="p">,</span><span class="s2">".png"</span><span class="p">]</span>
+<span class="n">ipnut_dict</span><span class="p">[</span><span class="s2">"size"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">224</span>
+<span class="n">input_dict</span><span class="p">[</span><span class="s2">"channels"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">input_dict</span><span class="p">[</span><span class="s2">"input_mode"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"resized"</span>
+<span class="n">input_dict</span><span class="p">[</span><span class="s2">"epoches"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">input_dict</span><span class="p">[</span><span class="s2">"classname"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"name_1"</span><span class="p">,</span><span class="s2">"name_2"</span><span class="p">,</span><span class="s2">"name_3"</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="s2">"name_N"</span><span class="p">]</span> <span class="c1"># 根据实际数据集配置,注:不要使用中文</span>
 </code></pre></div></p>
 </li>
 </ol>
@@ -981,10 +1149,13 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../../../js/extra.js"></script>
       
