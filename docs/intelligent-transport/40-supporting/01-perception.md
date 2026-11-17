@@ -1,6 +1,14 @@
 # S1 感知与传感器
 
-> 感知解决三个问题：**有什么、在哪里、往哪去**。它是预测与规划的唯一输入，也是"演示能跑、实车不敢"的最大来源。
+??? info "版本信息"
+    Created by SunZhu 2024-05-07 Version 1.3.0
+
+    Last Update：2026-11-17 16:30
+
+    * 车端与路侧感知合并成篇，保留路侧特殊性单独成节；
+    * 补入端到端感知、公开数据集与常用工具链。
+
+感知解决三个问题：**有什么、在哪里、往哪去**。它是预测与规划的唯一输入，也是"演示能跑、实车不敢"的最大来源。
 
 ## 1. 感知在系统中的位置
 
@@ -130,7 +138,7 @@ Occupancy 把空间离散成体素预测占用与语义，天然处理锥桶、�
 
 ## 6. 路侧感知的特殊性
 
-这是本库（车路协同主线）最该吃透的部分，和车端感知有本质差异：
+这是车路协同主线最该吃透的部分，和车端感知有本质差异：
 
 | 维度 | 车端 | 路侧 |
 | --- | --- | --- |
@@ -177,7 +185,31 @@ IMM 处理机动。工程上，一个调好参数的 Kalman + 匈牙利，往往
 4. **数据闭环决定上限**：长尾靠主动学习挖，靠 badcase 管理收敛，不是靠换 backbone。
 5. **可解释性要留**：安全相关场景需要能回答"为什么没检出"，纯黑盒会被审核卡住。
 
-## 10. 待研究
+## 10. 端到端感知
+
+UniAD、VAD 一类做法把感知、预测、规划放进一个可微网络，用规划损失反向约束感知表示。
+
+- 收益：去掉模块间接口的信息损失，长尾场景下可全局最优；
+- 代价：可解释性差、故障难定位、训练数据要求高、安全论证路径不清晰；
+- 工程折中：感知仍输出结构化结果供规划与安全监控，端到端作为并行支路做对比与兜底。
+
+## 11. 公开数据集与工具链
+
+| 数据集 | 传感器 | 规模/特点 |
+| --- | --- | --- |
+| [nuScenes](https://www.nuscenes.org/) | 6 相机 + 32 线 LiDAR + 5 雷达 | 1000 场景，BEV/3D 检测事实标准 |
+| [Waymo Open](https://waymo.com/open/) | 5 相机 + 3 LiDAR | 标注质量高，评测严 |
+| [KITTI](https://www.cvlibs.net/datasets/kitti/) | 2 相机 + 64 线 LiDAR | 老基准，仍用于算法对比 |
+| [Argoverse 2](https://www.argoverse.org/) | 7 相机 + 2 LiDAR | 侧重预测与地图 |
+| [ONCE](https://once-for-auto-driving.github.io/) | 1 LiDAR + 7 相机 | 国内道路，量大 |
+| [DAIR-V2X](https://github.com/AIR-THU/DAIR-V2X) | 车端 + 路侧 | 车路协同研究首选 |
+| [Cityscapes](https://www.cityscapes-dataset.com/) / [BDD100K](https://bdd-data.berkeley.edu/) | 单目 | 2D 分割与检测预训练 |
+
+- **框架**：[MMDetection3D](https://github.com/open-mmlab/mmdetection3d)、[OpenPCDet](https://github.com/open-mmlab/OpenPCDet)、[BEVFormer](https://github.com/fundamentalvision/BEVFormer) / [BEVDet](https://github.com/HuangJunJie2017/BEVDet)、[Detectron2](https://github.com/facebookresearch/detectron2)
+- **部署**：[TensorRT](https://developer.nvidia.com/tensorrt)、[ONNX Runtime](https://onnxruntime.ai/)、CUDA Graph、[DeepStream](https://developer.nvidia.com/deepstream-sdk)
+- **文献**：[PointPillars](https://arxiv.org/abs/1812.05784)（pillar 编码，实时点云检测 baseline）、[LSS](https://arxiv.org/abs/2008.05711)（BEV 范式起点）、[CenterPoint](https://arxiv.org/abs/2006.11275)、[BEVFormer](https://arxiv.org/abs/2203.17270)、[BEVFusion](https://arxiv.org/abs/2205.13542)、[MapTR](https://arxiv.org/abs/2208.14437)、[OccFormer](https://arxiv.org/abs/2304.05316)、[UniAD](https://arxiv.org/abs/2212.10156)
+
+## 12. 待研究
 
 - 路侧多设备拼接时，重叠区的**目标去重**用什么策略最稳（几何优先 vs 特征优先）？
 - 标定漂移的**在线自检**：能否用 V2X 上报的车辆轨迹反过来校核外参？

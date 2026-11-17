@@ -24,17 +24,14 @@ nav:
             - 资料: 2019_summer/deeplearning/references.md
         - Unity:
             - FreewayEquipment: 2019_summer/Unity/FreewayEquipment.md
-    - 自动驾驶:
-        - 车路协同自动驾驶资料搜集: auto-driving/Readme.md
-        - 自动驾驶感知: auto-driving/Perception.md
-    - 智能交通知识库:
-        - 知识网络总览: intelligent-transport/index.md
+    - 智能交通:
+        - 总览: intelligent-transport/index.md
         - 元知识 M:
-            - M1 知识网络框架与编号体系: intelligent-transport/00-meta/01-framework.md
+            - M1 知识框架与编号体系: intelligent-transport/00-meta/01-framework.md
             - M2.1 领域全景与演进脉络: intelligent-transport/00-meta/02-landscape.md
             - M2.2 术语与概念体系: intelligent-transport/00-meta/03-terminology.md
-            - M3.1 阅读路线与使用指南: intelligent-transport/00-meta/04-reading.md
-        - 智能交通运行管控 T:
+            - M3.1 阅读路线与写作规范: intelligent-transport/00-meta/04-reading.md
+        - 运行管控 T:
             - T1 交通流与运行安全理论: intelligent-transport/10-traffic-ops/01-traffic-flow.md
             - T2 路网运行监测与事件检测: intelligent-transport/10-traffic-ops/02-monitoring.md
             - T3 主动安全管控: intelligent-transport/10-traffic-ops/03-active-safety.md
