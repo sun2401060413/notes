@@ -16,7 +16,7 @@
 
 * [OpenCV-Python Tutorials](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html) (Online,OpenCV-python官方教程)
 
-* [OpenCV_Computer_Vision_with_Python](/2019_summer/opencv/OpenCV_Computer_Vision_with_Python.pdf) (PDF电子书,版本较老,对于新版本参考作用有限)
+* [OpenCV_Computer_Vision_with_Python](OpenCV_Computer_Vision_with_Python.pdf) (PDF电子书,版本较老,对于新版本参考作用有限)
 
 * [Python Code Examples](https://www.programcreek.com/python/) (Python 代码示例搜索. 输入‘cv2’,可检索opencv常见module的用例)
 
@@ -86,7 +86,7 @@ cv2.__version__
 * Example 5: 图像绘制;
 * Example 6: GUI;
 
-[所有代码示例文件打包下载](/2019_summer/opencv/example.zip)
+[所有代码示例文件打包下载](example.zip)
 
 ---
 

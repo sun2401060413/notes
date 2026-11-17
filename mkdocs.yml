@@ -1,9 +1,11 @@
 site_name: 培训资料
 site_url: https://sun2401060413.github.io/notes/
-theme: material
+theme:
+    name: material
+    language: zh
 extra:
     search:
-        language: 'en,ja'
+        language: 'zh'
 
 site_description: '云笔记'
 docs_dir: docs
@@ -25,6 +27,27 @@ nav:
     - 自动驾驶:
         - 车路协同自动驾驶资料搜集: auto-driving/Readme.md
         - 自动驾驶感知: auto-driving/Perception.md
+    - 智能交通知识库:
+        - 知识网络总览: intelligent-transport/index.md
+        - 元知识 M:
+            - M1 知识网络框架与编号体系: intelligent-transport/00-meta/01-framework.md
+            - M2.1 领域全景与演进脉络: intelligent-transport/00-meta/02-landscape.md
+            - M2.2 术语与概念体系: intelligent-transport/00-meta/03-terminology.md
+            - M3.1 阅读路线与使用指南: intelligent-transport/00-meta/04-reading.md
+        - 智能交通运行管控 T:
+            - T1 交通流与运行安全理论: intelligent-transport/10-traffic-ops/01-traffic-flow.md
+            - T2 路网运行监测与事件检测: intelligent-transport/10-traffic-ops/02-monitoring.md
+            - T3 主动安全管控: intelligent-transport/10-traffic-ops/03-active-safety.md
+            - T4 交通管控与信号优化: intelligent-transport/10-traffic-ops/04-control.md
+        - 车路协同 V:
+            - V1 体系架构与演进: intelligent-transport/20-v2x/01-architecture.md
+            - V2 通信与协议（V2X）: intelligent-transport/20-v2x/02-communication.md
+        - 人工智能 A:
+            - A0 域路线图与关键概念: intelligent-transport/30-ai/00-roadmap.md
+        - 支撑技术 S:
+            - S1 感知与传感器: intelligent-transport/40-supporting/01-perception.md
+            - S2 定位与时空基准: intelligent-transport/40-supporting/02-localization.md
+            - S3 车端决策规划与控制: intelligent-transport/40-supporting/03-planning-control.md
     - 项目:
         - 高速公路环境状态辨识: resume/EnvirDetection.md
         - 三维数字孪生应急演练系统: resume/HZMB.md

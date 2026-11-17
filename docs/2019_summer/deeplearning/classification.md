@@ -10,7 +10,7 @@
 
 
 
-[Alexnet 代码下载](/2019_summer/deepLearning/alexnet.zip)
+[Alexnet 代码下载](alexnet.zip)
 
 ---
 
