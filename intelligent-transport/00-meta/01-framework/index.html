@@ -1,0 +1,2768 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="云笔记">
+      
+      
+      
+        <link rel="canonical" href="https://sun2401060413.github.io/notes/intelligent-transport/00-meta/01-framework/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../02-landscape/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>M1 知识网络框架与编号体系 - 培训资料</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#m1-知识网络框架与编号体系" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="培训资料" class="md-header__button md-logo" aria-label="培训资料" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            培训资料
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              M1 知识网络框架与编号体系
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="培训资料" class="md-nav__button md-logo" aria-label="培训资料" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    培训资料
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    培训
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    培训
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenCV
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OpenCV
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2019_summer/opencv/opencv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenCV 培训
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2019_summer/opencv/cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenCV CheatSheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2019_summer/opencv/video2image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    opencv 常用程序（一）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deep Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2019_summer/deeplearning/classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classification 接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2019_summer/deeplearning/alexnet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    训练参数配置记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2019_summer/deeplearning/densenet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Densenet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2019_summer/deeplearning/references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    资料
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2019_summer/Unity/FreewayEquipment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FreewayEquipment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动驾驶
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    自动驾驶
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../auto-driving/Readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    车路协同自动驾驶资料搜集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../auto-driving/Perception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动驾驶感知
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能交通知识库
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    智能交通知识库
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    知识网络总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    元知识 M
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    元知识 M
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M1 知识网络框架与编号体系
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M1 知识网络框架与编号体系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-为什么是网络而不是目录树" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 为什么是"网络"而不是"目录树"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-六域总览" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 六域总览
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-完整框架l1-主题群--l2-专题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 完整框架（L1 主题群 → L2 专题）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 完整框架（L1 主题群 → L2 专题）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m-元知识" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M 元知识
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t-智能交通运行管控公路主动安全管控" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T 智能交通运行管控（公路主动安全管控）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-车路协同" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V 车路协同
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-人工智能" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A 人工智能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s-支撑技术" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        S 支撑技术
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-产业与治理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I 产业与治理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-检索层不进框架树" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X 检索层（不进框架树）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-跨域关联几个典型场景链" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 跨域关联：几个典型"场景链"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 跨域关联：几个典型&#34;场景链&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#链路-1高速公路团雾预警与限速" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        链路 1：高速公路团雾预警与限速
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#链路-2城市路口冲突预警" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        链路 2：城市路口冲突预警
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#链路-3重点营运车辆两客一危动态管控" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        链路 3：重点营运车辆（两客一危）动态管控
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#链路-4干线绿波--车路协同车速引导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        链路 4：干线绿波 + 车路协同车速引导
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-使用约定" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 使用约定
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 使用约定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-编号怎么用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 编号怎么用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-新增内容的判断顺序" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 新增内容的判断顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-不做的事" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 不做的事
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-现状与推进顺序" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 现状与推进顺序
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-landscape/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M2.1 领域全景与演进脉络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-terminology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M2.2 术语与概念体系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-reading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M3.1 阅读路线与使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能交通运行管控 T
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    智能交通运行管控 T
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-traffic-ops/01-traffic-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    T1 交通流与运行安全理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-traffic-ops/02-monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    T2 路网运行监测与事件检测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-traffic-ops/03-active-safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    T3 主动安全管控
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-traffic-ops/04-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    T4 交通管控与信号优化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    车路协同 V
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    车路协同 V
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20-v2x/01-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    V1 体系架构与演进
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20-v2x/02-communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    V2 通信与协议（V2X）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人工智能 A
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    人工智能 A
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../30-ai/00-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A0 域路线图与关键概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    支撑技术 S
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    支撑技术 S
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../40-supporting/01-perception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S1 感知与传感器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../40-supporting/02-localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S2 定位与时空基准
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../40-supporting/03-planning-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S3 车端决策规划与控制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    项目
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resume/EnvirDetection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    高速公路环境状态辨识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resume/HZMB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    三维数字孪生应急演练系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/mainpage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自用主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-为什么是网络而不是目录树" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 为什么是"网络"而不是"目录树"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-六域总览" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 六域总览
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-完整框架l1-主题群--l2-专题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 完整框架（L1 主题群 → L2 专题）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 完整框架（L1 主题群 → L2 专题）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m-元知识" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M 元知识
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t-智能交通运行管控公路主动安全管控" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T 智能交通运行管控（公路主动安全管控）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-车路协同" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V 车路协同
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-人工智能" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A 人工智能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s-支撑技术" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        S 支撑技术
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-产业与治理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I 产业与治理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-检索层不进框架树" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X 检索层（不进框架树）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-跨域关联几个典型场景链" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 跨域关联：几个典型"场景链"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 跨域关联：几个典型&#34;场景链&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#链路-1高速公路团雾预警与限速" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        链路 1：高速公路团雾预警与限速
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#链路-2城市路口冲突预警" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        链路 2：城市路口冲突预警
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#链路-3重点营运车辆两客一危动态管控" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        链路 3：重点营运车辆（两客一危）动态管控
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#链路-4干线绿波--车路协同车速引导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        链路 4：干线绿波 + 车路协同车速引导
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-使用约定" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 使用约定
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 使用约定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-编号怎么用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 编号怎么用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-新增内容的判断顺序" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 新增内容的判断顺序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-不做的事" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 不做的事
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-现状与推进顺序" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 现状与推进顺序
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="m1-知识网络框架与编号体系">M1 知识网络框架与编号体系<a class="headerlink" href="#m1-知识网络框架与编号体系" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>这份文档是整个库的<strong>骨架</strong>。所有后续内容都挂在它的某个节点上，所有检索都从它的编号出发。
+维护原则：节点可以增补，编号不复用；一个知识点只归一个主节点，但可以被多个节点交叉引用。</p>
+</blockquote>
+<h2 id="1-为什么是网络而不是目录树">1. 为什么是"网络"而不是"目录树"<a class="headerlink" href="#1-为什么是网络而不是目录树" title="Permanent link">&para;</a></h2>
+<p>纯目录树的问题是：一个知识点只能挂在一处，检索时容易漏。工程实际里，"路口冲突预警"这件事同时属于
+运行管控（安全应用）、车路协同（协同感知）、人工智能（目标检测与轨迹预测）、支撑技术（感知与通信）。
+所以框架采用<strong>树形骨架 + 网状关联</strong>：</p>
+<div class="highlight"><pre><span></span><code>        树形：负责"找得到"                网状：负责"想得全"
+   ┌──────────────────────┐        ┌──────────────────────────┐
+   │ 域 → 主题群 → 专题   │   +    │ 跨域关联表 / 标签 / 场景链 │
+   └──────────────────────┘        └──────────────────────────┘
+              编号唯一                      一个场景串起 4–6 个节点
+</code></pre></div>
+<h2 id="2-六域总览">2. 六域总览<a class="headerlink" href="#2-六域总览" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>域</th>
+<th>回答什么问题</th>
+<th>我的角色定位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M</strong></td>
+<td>元知识</td>
+<td>这个领域怎么理解、怎么查、怎么讲</td>
+<td>全局视角</td>
+</tr>
+<tr>
+<td><strong>T</strong></td>
+<td>智能交通运行管控</td>
+<td>路网跑得怎么样、怎么让它更安全更顺畅</td>
+<td><strong>主专业</strong></td>
+</tr>
+<tr>
+<td><strong>V</strong></td>
+<td>车路协同</td>
+<td>车与路怎么协同、系统怎么建怎么运营</td>
+<td>主战场</td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>人工智能</td>
+<td>用什么模型把数据变成判断与决策</td>
+<td>能力放大器</td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td>支撑技术</td>
+<td>被多域复用的底层技术（感知/定位/平台/安全）</td>
+<td>工具箱</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>产业与治理</td>
+<td>标准、政策、钱、人</td>
+<td>落地约束</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">主次关系</p>
+<p><strong>T 是目的，V 是手段，A 是工具，S 是基础，I 是边界。</strong>
+任何一个项目问题，先落到 T（要解决什么交通问题），再找 V/A/S 的组合，最后用 I 校验合规与可交付性。</p>
+</div>
+<h2 id="3-完整框架l1-主题群--l2-专题">3. 完整框架（L1 主题群 → L2 专题）<a class="headerlink" href="#3-完整框架l1-主题群--l2-专题" title="Permanent link">&para;</a></h2>
+<p>图例：资料支撑度 <strong>●</strong> 强（≥20 篇）/ <strong>◐</strong> 中（5–19 篇）/ <strong>○</strong> 弱（1–4 篇）/ <strong>✗</strong> 空白（0 篇）</p>
+<h3 id="m-元知识">M 元知识<a class="headerlink" href="#m-元知识" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>L1 主题群</th>
+<th>L2 专题</th>
+<th>支撑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td>知识地图</td>
+<td>M1.1 框架与编号体系（本文）· M1.2 域间关联 · M1.3 维护约定</td>
+<td>—</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>领域认知</td>
+<td>M2.1 概念边界与演进脉络 · M2.2 术语与口径 · M2.3 技术路线之争</td>
+<td>●</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>阅读与写作</td>
+<td>M3.1 阅读路线与使用指南（含库/归档分工、写作规范）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>工作方法</td>
+<td>M4.1 方案评审四问法 · M4.2 技术选型 · M4.3 知识沉淀流程</td>
+<td>○</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t-智能交通运行管控公路主动安全管控">T 智能交通运行管控（公路主动安全管控）<a class="headerlink" href="#t-智能交通运行管控公路主动安全管控" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>L1 主题群</th>
+<th>L2 专题</th>
+<th>支撑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>交通流与运行理论</td>
+<td>T1.1 基本图与通行能力 · T1.2 拥堵机理与消散 · T1.3 运行状态评价（LOS/拥堵指数）</td>
+<td>○</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>运行监测与感知</td>
+<td>T2.1 交通参数检测（线圈/微波/视频/雷视） · T2.2 车辆轨迹与重识别 · T2.3 交通事件检测 · T2.4 气象与环境感知</td>
+<td>◐</td>
+</tr>
+<tr>
+<td>T3</td>
+<td><strong>主动安全管控</strong></td>
+<td>T3.1 风险辨识与冲突分析 · T3.2 速度管控 · T3.3 重点车辆管控 · T3.4 路段专项（隧道/长下坡/匝道/施工区） · T3.5 预警发布与诱导 · T3.6 安全评价与事故预测</td>
+<td>○</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>交通管控与信号</td>
+<td>T4.1 单点配时 · T4.2 干线协调与绿波 · T4.3 匝道控制 · T4.4 路径诱导与需求管理 · T4.5 管控算法（规则/优化/强化学习）</td>
+<td>○</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>应急处置与调度</td>
+<td>T5.1 事件分级与预案 · T5.2 检测-确认-响应闭环 · T5.3 救援资源调度</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>收费与公路运营</td>
+<td>T6.1 ETC 与自由流收费 · T6.2 稽核与逃费治理 · T6.3 运营指标体系</td>
+<td>◐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="v-车路协同">V 车路协同<a class="headerlink" href="#v-车路协同" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>L1 主题群</th>
+<th>L2 专题</th>
+<th>支撑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V1</td>
+<td>体系与架构</td>
+<td>V1.1 车路云一体化架构 · V1.2 云控平台 · V1.3 先导区与双智</td>
+<td>●</td>
+</tr>
+<tr>
+<td>V2</td>
+<td>通信与协议</td>
+<td>V2.1 C-V2X/DSRC/5G 路线 · V2.2 PC5/Uu 与资源调度 · V2.3 消息集（BSM/RSI/RSM/SPAT/MAP） · V2.4 安全证书体系</td>
+<td>●</td>
+</tr>
+<tr>
+<td>V3</td>
+<td>路侧系统</td>
+<td>V3.1 RSU 与路侧设备 · V3.2 雷视融合 · V3.3 边缘计算/MEC · V3.4 标定与运维</td>
+<td>●</td>
+</tr>
+<tr>
+<td>V4</td>
+<td>车端与协同应用</td>
+<td>V4.1 应用能力分级 · V4.2 预警类应用 · V4.3 协同决策类（GLOSA/协同变道/编队） · V4.4 OBU 与 HMI</td>
+<td>●</td>
+</tr>
+<tr>
+<td>V5</td>
+<td>地图与定位</td>
+<td>V5.1 HD Map 与格式（NDS/OpenDRIVE/Lanelet2） · V5.2 定位与时空基准 · V5.3 众包更新</td>
+<td>●</td>
+</tr>
+<tr>
+<td>V6</td>
+<td>测试验证</td>
+<td>V6.1 场景库与仿真 · V6.2 场地与外场测试 · V6.3 评价指标</td>
+<td>◐</td>
+</tr>
+<tr>
+<td>V7</td>
+<td>建设与运营</td>
+<td>V7.1 建设方案与招投标 · V7.2 商业模式 · V7.3 运维体系</td>
+<td>●</td>
+</tr>
+</tbody>
+</table>
+<h3 id="a-人工智能">A 人工智能<a class="headerlink" href="#a-人工智能" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>L1 主题群</th>
+<th>L2 专题</th>
+<th>支撑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td>计算机视觉基础</td>
+<td>A1.1 检测 · A1.2 分割 · A1.3 多目标跟踪 · A1.4 ReID 与跨镜追踪</td>
+<td>◐</td>
+</tr>
+<tr>
+<td>A2</td>
+<td>交通视觉专项</td>
+<td>A2.1 车辆/车型/车牌 · A2.2 交通事件视觉识别 · A2.3 抛洒物与异常目标 · A2.4 行人与非机动车</td>
+<td>○</td>
+</tr>
+<tr>
+<td>A3</td>
+<td>时序与预测</td>
+<td>A3.1 轨迹预测 · A3.2 交通流预测 · A3.3 时序异常检测</td>
+<td>○</td>
+</tr>
+<tr>
+<td>A4</td>
+<td>大模型与多模态</td>
+<td>A4.1 VLM 与视频理解 · A4.2 领域微调与 RAG · A4.3 大模型在交通管控中的边界</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>A5</td>
+<td>Agent 与智能体</td>
+<td>A5.1 工具调用与规划 · A5.2 多智能体协同 · A5.3 管控/研判 Agent · A5.4 安全与可解释</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>A6</td>
+<td>工程化</td>
+<td>A6.1 数据闭环与标注 · A6.2 量化与部署 · A6.3 MLOps 与评测体系</td>
+<td>◐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="s-支撑技术">S 支撑技术<a class="headerlink" href="#s-支撑技术" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>L1 主题群</th>
+<th>L2 专题</th>
+<th>支撑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>感知与传感器</td>
+<td>S1.1 相机/雷达/激光特性 · S1.2 标定与时空同步 · S1.3 多传感器融合 · S1.4 占用栅格</td>
+<td>●</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>定位与时空基准</td>
+<td>S2.1 坐标系 · S2.2 GNSS/RTK/PPP · S2.3 IMU/组合导航 · S2.4 地图匹配/UWB · S2.5 时间同步</td>
+<td>◐</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>车端决策规划与控制</td>
+<td>S3.1 行为决策 · S3.2 路径/轨迹规划 · S3.3 控制 · S3.4 安全模型</td>
+<td>●</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>数字孪生与仿真</td>
+<td>S4.1 交通仿真（SUMO/VISSIM） · S4.2 自动驾驶仿真（CARLA/LGSVL） · S4.3 场景库与加速测试 · S4.4 孪生体构建</td>
+<td>●</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>平台与中间件</td>
+<td>S5.1 云平台与微服务 · S5.2 边缘计算框架 · S5.3 消息中间件与协议 · S5.4 数据治理</td>
+<td>●</td>
+</tr>
+<tr>
+<td>S6</td>
+<td>安全与合规</td>
+<td>S6.1 功能安全（26262） · S6.2 SOTIF · S6.3 信息安全（21434） · S6.4 测绘与数据合规</td>
+<td>◐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="i-产业与治理">I 产业与治理<a class="headerlink" href="#i-产业与治理" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>L1 主题群</th>
+<th>L2 专题</th>
+<th>支撑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I1</td>
+<td>标准与规范</td>
+<td>I1.1 标准体系树 · I1.2 国标/行标 · I1.3 团标（CSAE/T-ITS） · I1.4 地方标准</td>
+<td>●</td>
+</tr>
+<tr>
+<td>I2</td>
+<td>政策与示范</td>
+<td>I2.1 国家政策脉络 · I2.2 先导区与试点 · I2.3 双智与车路云一体化</td>
+<td>●</td>
+</tr>
+<tr>
+<td>I3</td>
+<td>产业链与企业</td>
+<td>I3.1 芯片/模组 · I3.2 设备商 · I3.3 图商与运营商 · I3.4 集成商与业主</td>
+<td>◐</td>
+</tr>
+<tr>
+<td>I4</td>
+<td>项目与投融资</td>
+<td>I4.1 典型项目拆解 · I4.2 投资与运营模式 · I4.3 验收与考核</td>
+<td>●</td>
+</tr>
+<tr>
+<td>I5</td>
+<td>人才与组织</td>
+<td>I5.1 岗位能力模型 · I5.2 团队配置 · I5.3 面试题库</td>
+<td>○</td>
+</tr>
+</tbody>
+</table>
+<h3 id="x-检索层不进框架树">X 检索层（不进框架树）<a class="headerlink" href="#x-检索层不进框架树" title="Permanent link">&para;</a></h3>
+<p>检索不单独设域：靠<strong>编号直达</strong>、<strong>场景链</strong>（本文第 4 节）与<strong>全文搜索</strong>解决，
+术语口径见 M2.2，阅读路线见 M3.1。知识库不为归档素材建索引——素材留在归档区，只在这里出现消化后的内容。</p>
+<h2 id="4-跨域关联几个典型场景链">4. 跨域关联：几个典型"场景链"<a class="headerlink" href="#4-跨域关联几个典型场景链" title="Permanent link">&para;</a></h2>
+<p>这是把树变成网的关键——<strong>每个真实问题都是一条跨域链路</strong>：</p>
+<h3 id="链路-1高速公路团雾预警与限速">链路 1：高速公路团雾预警与限速<a class="headerlink" href="#链路-1高速公路团雾预警与限速" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>T2.4 气象感知（能见度检测）
+   └─▶ T3.1 风险评估（能见度-车速-制动距离模型）
+          └─▶ T3.2 速度管控（分级限速策略）＋ T3.5 预警发布（VMS/广播/V2X）
+                 └─▶ V2.2 通信（RSI 事件下发）＋ V4.2 预警应用（车端提醒）
+                        └─▶ I1 标准（团雾预警阈值是否有国标依据）＋ S6 合规
+</code></pre></div>
+<h3 id="链路-2城市路口冲突预警">链路 2：城市路口冲突预警<a class="headerlink" href="#链路-2城市路口冲突预警" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>A1.3 多目标跟踪 ＋ A2.4 行人识别
+   └─▶ V3.2 雷视融合（路侧感知）
+          └─▶ T3.1 冲突分析（TTC/PET 判定）
+                 └─▶ V2.3 RSM 消息 ──▶ V4.2 车端预警
+                        └─▶ T3.6 效果评价（冲突率下降多少）
+</code></pre></div>
+<h3 id="链路-3重点营运车辆两客一危动态管控">链路 3：重点营运车辆（两客一危）动态管控<a class="headerlink" href="#链路-3重点营运车辆两客一危动态管控" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>T2.2 轨迹与重识别 ＋ T3.3 重点车辆管控
+   └─▶ V1.2 云控平台（车辆画像与轨迹回放）
+          └─▶ A3.1 轨迹预测（风险行为预判）
+                 └─▶ T3.5 分级预警（车端/企业/监管三端）
+                        └─▶ T5 应急处置（事件闭环）
+</code></pre></div>
+<h3 id="链路-4干线绿波--车路协同车速引导">链路 4：干线绿波 + 车路协同车速引导<a class="headerlink" href="#链路-4干线绿波--车路协同车速引导" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>T4.2 干线协调（配时方案）
+   └─▶ V2.3 SPAT 消息（相位与时序）
+          └─▶ V4.3 GLOSA 车速引导
+                 └─▶ S3.2 纵向规划（按信号优化到站时间）
+                        └─▶ T1.3 评价（延误/停车次数/油耗）
+</code></pre></div>
+<h2 id="5-使用约定">5. 使用约定<a class="headerlink" href="#5-使用约定" title="Permanent link">&para;</a></h2>
+<h3 id="51-编号怎么用">5.1 编号怎么用<a class="headerlink" href="#51-编号怎么用" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>写法</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文档命名</td>
+<td><code>NN.中文标题.md</code>，NN 与 L1/L2 顺序对应</td>
+<td><code>03.主动安全管控.md</code></td>
+</tr>
+<tr>
+<td>文内引用</td>
+<td>直接用编号</td>
+<td>"见 T3.2 速度管控"</td>
+</tr>
+<tr>
+<td>标签</td>
+<td><code>#T3.2</code>，用于全文检索与后续打标</td>
+<td><code>tags: [T3.2, V4.2]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-新增内容的判断顺序">5.2 新增内容的判断顺序<a class="headerlink" href="#52-新增内容的判断顺序" title="Permanent link">&para;</a></h3>
+<ol>
+<li>它解决什么<strong>交通问题</strong>？→ 先归到 T 域</li>
+<li>靠什么<strong>系统/协同</strong>实现？→ V 域</li>
+<li>用了什么<strong>模型/算法</strong>？→ A 域</li>
+<li>依赖什么<strong>底层技术</strong>？→ S 域</li>
+<li>受什么<strong>标准/政策/商业</strong>约束？→ I 域</li>
+<li>拆不准就放 M4.3（工作方法）暂存，日后归位。</li>
+</ol>
+<h3 id="53-不做的事">5.3 不做的事<a class="headerlink" href="#53-不做的事" title="Permanent link">&para;</a></h3>
+<ul>
+<li>不追求"每个节点都写满"，<strong>空白也是信息</strong>（✗ 标记告诉你该补什么）。</li>
+<li><strong>不搬移、不索引原始素材</strong>：素材是原料，知识库是产品，只沉淀提炼后的结论。</li>
+<li>不为凑字数写"综述式空话"，宁可留一行"待补"。</li>
+</ul>
+<h2 id="6-现状与推进顺序">6. 现状与推进顺序<a class="headerlink" href="#6-现状与推进顺序" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>内容</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>框架与编号体系、元知识、资料索引</td>
+<td>✅ 本次完成</td>
+</tr>
+<tr>
+<td>2</td>
+<td>T 域主线（交通流 → 监测 → 主动安全 → 管控 → 应急 → 收费）</td>
+<td>🚧 进行中（T1/T2/T3/T4 已成文）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>V 域完整化（体系/路侧/车端应用/测试/运营）</td>
+<td>🚧 V2 已成文，其余待写</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A 域（视觉 → 交通视觉 → 预测 → 大模型 → Agent → 工程化）</td>
+<td>🚧 路线图已成，正文待写</td>
+</tr>
+<tr>
+<td>5</td>
+<td>S 域补齐（仿真、平台、安全合规）</td>
+<td>🚧 S1/S2/S3 已成文</td>
+</tr>
+<tr>
+<td>6</td>
+<td>I 域（标准树、政策、产业链、项目）</td>
+<td>🚧 待写</td>
+</tr>
+<tr>
+<td>7</td>
+<td>归档区素材治理（去重、补出处、打标签）</td>
+<td>🚧 与知识库分开推进</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

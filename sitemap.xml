@@ -2,58 +2,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sun2401060413.github.io/notes/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/2019_summer/Unity/FreewayEquipment/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/2019_summer/deeplearning/alexnet/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/2019_summer/deeplearning/classification/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/2019_summer/deeplearning/densenet/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/2019_summer/deeplearning/references/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/2019_summer/opencv/cheatsheet/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/2019_summer/opencv/opencv/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/2019_summer/opencv/video2image/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/auto-driving/Perception/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/auto-driving/Readme/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/home/mainpage/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/00-meta/01-framework/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/00-meta/02-landscape/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/00-meta/03-terminology/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/00-meta/04-reading/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/10-traffic-ops/01-traffic-flow/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/10-traffic-ops/02-monitoring/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/10-traffic-ops/03-active-safety/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/10-traffic-ops/04-control/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/20-v2x/01-architecture/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/20-v2x/02-communication/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/30-ai/00-roadmap/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/40-supporting/01-perception/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/40-supporting/02-localization/</loc>
+         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+         <loc>https://sun2401060413.github.io/notes/intelligent-transport/40-supporting/03-planning-control/</loc>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/resume/EnvirDetection/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
     <url>
          <loc>https://sun2401060413.github.io/notes/resume/HZMB/</loc>
-         <lastmod>2026-11-16</lastmod>
+         <lastmod>2026-11-17</lastmod>
     </url>
 </urlset>
